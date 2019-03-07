@@ -1,13 +1,8 @@
 import scaffoldConfig from './config-scaffolder';
+import scaffoldBadgeDetails from './badge-scaffolder';
 
-export default async function ({vcs, projectRoot}) {
+export default async function ({vcs, projectRoot, visibility}) {
   await scaffoldConfig(projectRoot);
 
-  return {
-    badge: {
-      text: 'CircleCI',
-      link: `https://circleci.com/gh/${vcs.owner}/${vcs.name}`,
-      img: `https://img.shields.io/circleci/project/github/${vcs.owner}/${vcs.name}/master.svg`
-    }
-  };
+  return {badge: scaffoldBadgeDetails(vcs, visibility)};
 }

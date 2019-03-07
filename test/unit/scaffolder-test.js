@@ -2,6 +2,7 @@ import {assert} from 'chai';
 import any from '@travi/any';
 import sinon from 'sinon';
 import * as configScaffolder from '../../src/config-scaffolder';
+import * as badgeScaffolder from '../../src/badge-scaffolder';
 import scaffold from '../../src';
 
 suite('scaffolder', () => {
@@ -11,6 +12,7 @@ suite('scaffolder', () => {
     sandbox = sinon.createSandbox();
 
     sandbox.stub(configScaffolder, 'default');
+    sandbox.stub(badgeScaffolder, 'default');
 
     configScaffolder.default.resolves();
   });
@@ -18,20 +20,13 @@ suite('scaffolder', () => {
   teardown(() => sandbox.restore());
 
   test('that the config is defined', async () => {
-    const vcsHostOwner = any.word();
-    const vcsHostRepositoryName = any.word();
     const projectRoot = any.string();
+    const vcs = any.simpleObject();
+    const visibility = any.word();
+    const badgeDetails = any.simpleObject();
+    badgeScaffolder.default.withArgs(vcs, visibility).returns(badgeDetails);
 
-    assert.deepEqual(
-      await scaffold({projectRoot, vcs: {owner: vcsHostOwner, name: vcsHostRepositoryName}}),
-      {
-        badge: {
-          text: 'CircleCI',
-          link: `https://circleci.com/gh/${vcsHostOwner}/${vcsHostRepositoryName}`,
-          img: `https://img.shields.io/circleci/project/github/${vcsHostOwner}/${vcsHostRepositoryName}/master.svg`
-        }
-      }
-    );
+    assert.deepEqual(await scaffold({projectRoot, vcs, visibility}), {badge: badgeDetails});
     assert.calledWith(configScaffolder.default, projectRoot);
   });
 });
