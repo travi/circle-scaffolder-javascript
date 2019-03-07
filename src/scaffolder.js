@@ -1,4 +1,8 @@
-export default function ({vcs}) {
+import scaffoldConfig from './config-scaffolder';
+
+export default async function ({vcs, projectRoot}) {
+  await scaffoldConfig(projectRoot);
+
   return {
     badge: {
       text: 'CircleCI',
