@@ -3,7 +3,7 @@ import any from '@travi/any';
 import sinon from 'sinon';
 import * as configScaffolder from '../../src/config-scaffolder';
 import * as badgeScaffolder from '../../src/badge-scaffolder';
-import scaffold from '../../src';
+import {scaffold} from '../../src';
 
 suite('scaffolder', () => {
   let sandbox;
