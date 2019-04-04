@@ -1,5 +1,7 @@
 # circle-scaffolder-javascript
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/travi/circle-scaffolder-javascript.svg)](https://greenkeeper.io/)
+
 CI scaffolder for JavaScript projects on Circle
 
 <!-- status badges -->
