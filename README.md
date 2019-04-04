@@ -1,7 +1,5 @@
 # circle-scaffolder-javascript
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/travi/circle-scaffolder-javascript.svg)](https://greenkeeper.io/)
-
 CI scaffolder for JavaScript projects on Circle
 
 <!-- status badges -->
@@ -27,6 +25,7 @@ $ npm install @travi/circle-scaffolder-javascript --save-prod
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release][semantic-release-badge]][semantic-release-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
+[![Greenkeeper badge](https://badges.greenkeeper.io/travi/circle-scaffolder-javascript.svg)](https://greenkeeper.io/)
 
 ### Dependencies
 
