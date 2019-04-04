@@ -1,6 +1,6 @@
 # circle-scaffolder-javascript
 
-CI scaffolder for JavaScript projects on Circle
+CI scaffolder for JavaScript projects on [Circle](https://circleci.com)
 
 <!-- status badges -->
 [![Build Status][ci-badge]][ci-link]
