@@ -52,7 +52,7 @@
     "sinon": "15.2.0"
   },
   "dependencies": {
-    "make-dir": "^3.0.0",
+    "make-dir": "^4.0.0",
     "write-yaml": "^1.0.0"
   }
 }
