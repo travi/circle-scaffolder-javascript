@@ -3,20 +3,13 @@
   "description": "CI scaffolder for JavaScript projects on Circle",
   "license": "MIT",
   "version": "0.0.0-semantically-released",
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
-  "sideEffects": false,
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
-  "files": [
-    "lib/"
-  ],
   "repository": "travi/circle-scaffolder-javascript",
   "bugs": "https://github.com/travi/circle-scaffolder-javascript/issues",
   "homepage": "https://npm.im/@travi/circle-scaffolder-javascript",
-  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
+  "sideEffects": false,
   "scripts": {
     "lint:md": "remark . --frail",
     "lint:js": "eslint . --cache",
@@ -32,6 +25,17 @@
     "prepack": "run-s build",
     "prepare": "husky install",
     "lint:publish": "publint --strict"
+  },
+  "files": [
+    "lib/"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "dependencies": {
+    "make-dir": "^4.0.0",
+    "write-yaml": "^1.0.0"
   },
   "devDependencies": {
     "@babel/register": "7.22.5",
@@ -55,9 +59,5 @@
     "rollup": "3.27.0",
     "rollup-plugin-auto-external": "2.0.0",
     "sinon": "15.2.0"
-  },
-  "dependencies": {
-    "make-dir": "^4.0.0",
-    "write-yaml": "^1.0.0"
   }
 }
