@@ -26,8 +26,8 @@ suite('badge scaffolder', () => {
       {
         text: 'CircleCI',
         link: `https://circleci.com/gh/${vcsHostOwner}/${vcsHostRepositoryName}`,
-        img: `https://img.shields.io/circleci/token/<token here>/project/github/${vcsHostOwner}/` +
-          `${vcsHostRepositoryName}/master.svg`
+        img: `https://img.shields.io/circleci/token/<token here>/project/github/${vcsHostOwner}/`
+          + `${vcsHostRepositoryName}/master.svg`
       }
     );
   });
