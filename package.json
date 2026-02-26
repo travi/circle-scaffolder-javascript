@@ -34,7 +34,7 @@
     "provenance": true
   },
   "dependencies": {
-    "make-dir": "^4.0.0",
+    "make-dir": "^5.0.0",
     "write-yaml": "^1.0.0"
   },
   "devDependencies": {
